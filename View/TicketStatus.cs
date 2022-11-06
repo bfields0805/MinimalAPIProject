@@ -1,4 +1,4 @@
-enum TicketStatus
+public enum TicketStatus
       {
          Pending,
          Approved,

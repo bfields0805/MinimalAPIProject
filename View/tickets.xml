@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ArrayOfTicket xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Ticket id="2">
+        <data>Gas for company car</data>
+        <amount>20</amount>
+        <employee>employee1</employee>
+        <status>Pending</status>
+        <changedBy>N/A</changedBy>
+    </Ticket>
+    <Ticket id="3">
+        <data>Paper for copier</data>
+        <amount>15</amount>
+        <employee>employee2</employee>
+        <status>Pending</status>
+        <changedBy>N/A</changedBy>
+    </Ticket>
+</ArrayOfTicket>
