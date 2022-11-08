@@ -10,9 +10,15 @@ namespace Controler
          public TicketControler()
          {
             loadTickets();
+             int counter =1;
+             foreach(Ticket t in tickets)
+             {
+                counter++;
+             }
+             Ticket.nextID = counter;
          }
 
-         private void loadTickets(){
+         public void loadTickets(){
             tickets =ticket.ReadFromXml();
          }
 

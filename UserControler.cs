@@ -7,17 +7,15 @@ namespace Controler
         public static List<User> users { get; set; } = new List<User>();
 
         public User usr;
-      //   public Employee emp;
-
-      //   public Manager man;
+      
 
         public UserControler()
          {
             usr = new User();
-          //loadUsers();
+          loadUsers();
          }
 
-        private void loadUsers()
+        public void loadUsers()
         {
           users = usr.ReadFromXml();
 

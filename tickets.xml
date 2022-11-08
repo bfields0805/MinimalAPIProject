@@ -3,14 +3,14 @@
     <Ticket id="2">
         <data>Gas for company car</data>
         <amount>20</amount>
-        <employee>employee1</employee>
+        <employee>TJ</employee>
         <status>Pending</status>
         <changedBy>N/A</changedBy>
     </Ticket>
     <Ticket id="3">
         <data>Paper for copier</data>
         <amount>15</amount>
-        <employee>employee2</employee>
+        <employee>Bryon</employee>
         <status>Pending</status>
         <changedBy>N/A</changedBy>
     </Ticket>

@@ -25,14 +25,16 @@ namespace View
             // }
 
 
-              UserControler uc = new UserControler();
-              Employee emp1 = new Employee("Bryon", "me@myemail.com", "fields");
-              Manager man1 = new Manager("Teddy", "human@not_a_dog.com", "rawhide");
+            //   UserControler uc = new UserControler();
+            //   User emp1 = new User("Bryon", "me@myemail.com", "fields");
+            //   User man1 = new User("Teddy", "human@not_a_dog.com", "outside", true);
 
-              uc.newUser(emp1);
-              uc.newUser(man1);
+            //   uc.newUser(emp1);
+            //   uc.newUser(man1);
 
-              uc.saveUsers();
+            //   uc.saveUsers();
+
+            new Menu();
 
 
         }

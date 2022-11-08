@@ -8,7 +8,7 @@ namespace Model
 
     public class Ticket
     {
-        protected static int nextID = 1;
+        public static int nextID = 1;
         [XmlAttribute]
         public int id { get; set; } = 1;
         public string data { get; set; }
@@ -65,8 +65,8 @@ namespace Model
 
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder("Created by: " + employee + " Amount: " + amount +
-            " Status: " + status);
+            StringBuilder sb = new StringBuilder("ID: "+id+" Created by: " + employee + " Amount: " + amount +
+             "For: "+ data+"Status: " + status);
 
             return sb.ToString();
         }

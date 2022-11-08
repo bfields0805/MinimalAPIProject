@@ -8,6 +8,7 @@ namespace Model
         public string userName { get;  set; }
         public string password { get;  set; }
         public string email { get;  set; }
+        public bool isManager {get; set; }
         public XmlSerializer Serializer { get; } = new XmlSerializer(typeof(List<User>));
 
         public User()
@@ -18,6 +19,14 @@ namespace Model
             this.userName = name;
             this.email = email;
             this.password = password;
+        }
+
+        public User(string name, string email, string password, bool manager)
+        {
+            this.userName = name;
+            this.email = email;
+            this.password = password;
+            this.isManager = manager;
         }
 
         public void SerializeAsXml(List<User> users)
@@ -32,7 +41,7 @@ namespace Model
         }
         public List<User> ReadFromXml()
         {
-            StreamReader reader = new StreamReader("./xml");
+            StreamReader reader = new StreamReader("./users.xml");
             var Users = (List<User>?)Serializer.Deserialize(reader);
             reader.Close();
 
