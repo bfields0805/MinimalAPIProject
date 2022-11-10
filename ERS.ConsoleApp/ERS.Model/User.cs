@@ -1,15 +1,15 @@
 using System.IO;
 using System.Xml.Serialization;
-namespace Model
+namespace ERS.Model
 {
     public class User
     {
-        [XmlAttribute]
+      
         public string userName { get;  set; }
         public string password { get;  set; }
         public string email { get;  set; }
         public bool isManager {get; set; }
-        public XmlSerializer Serializer { get; } = new XmlSerializer(typeof(List<User>));
+        
 
         public User()
         { }
@@ -29,24 +29,7 @@ namespace Model
             this.isManager = manager;
         }
 
-        public void SerializeAsXml(List<User> users)
-        {
-
-            var newStringWriter = new StringWriter();
-            Serializer.Serialize(newStringWriter, users);
-
-            File.WriteAllText("./users.xml", newStringWriter.ToString());
-
-            newStringWriter.Close();
-        }
-        public List<User> ReadFromXml()
-        {
-            StreamReader reader = new StreamReader("./users.xml");
-            var Users = (List<User>?)Serializer.Deserialize(reader);
-            reader.Close();
-
-            return Users;
-        }
+      
 
         // public List<Ticket> viewTickets();
 
