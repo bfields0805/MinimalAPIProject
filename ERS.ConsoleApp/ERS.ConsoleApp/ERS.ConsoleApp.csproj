@@ -7,4 +7,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ERS.DataControler\ERS.DataControler.csproj" />
+    <ProjectReference Include="..\ERS.Model\ERS.Model.csproj" />
+  </ItemGroup>
+
 </Project>

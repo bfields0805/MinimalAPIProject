@@ -1,41 +1,48 @@
 
-
-
+using System.Text;
 
 namespace ERS.Model
 {
 
     public class Ticket
     {
-       
-       
+
+
         public int id { get; set; }
         public string data { get; set; }
         public double amount { get; set; }
-        public string employee { get; set; }
+        public int employee { get; set; }
 
         public TicketStatus status { get; set; }
 
-     
 
-        
+
+
 
         public Ticket() { }
 
-        public Ticket(string employee, double amount, string data, int status)
+        public Ticket(int id, string data, double amount, int employee, TicketStatus status)
+        {
+            this.id = id;
+            this.data = data;
+            this.amount = amount;
+            this.employee = employee;
+            this.status = status;
+        }
+        public Ticket(int employee, double amount, string data, int status)
         {
             this.employee = employee;
             this.amount = amount;
             this.data = data;
-            this.status = (TicketStatus) status;
-            
-           
+            this.status = (TicketStatus)status;
+
+
         }
 
 
-        public void changeStatus( TicketStatus s)
+        public void changeStatus(TicketStatus s)
         {
-            
+
             status = s;
         }
 
@@ -46,8 +53,8 @@ namespace ERS.Model
 
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder("ID: "+id+" Created by: " + employee + " Amount: " + amount +
-             "For: "+ data+"Status: " + status);
+            StringBuilder sb = new StringBuilder("ID: " + id + " Created by: " + employee + " Amount: " + amount +
+             "For: " + data + "Status: " + status);
 
             return sb.ToString();
         }
